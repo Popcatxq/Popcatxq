@@ -5,7 +5,7 @@ const config = {
   channelAccessToken: 'KRMvRxPlPDEzmHsksxMltupLekX4ECGtmYNcMW6zW98kd8fbfgrF0OxtLRA2fSv2dWQkDapOVIryvCALNi4eGZAvmPDh6XcqDkWHFyiIA3OIkZcWcvL2qzTP9hUJtXSs/ypQcmXaXt4mHtWkcKS09wdB04t89/1O/w1cDnyilFU=',
   channelSecret: '88d6b22cca949991a63f04d3536bf5f7',
 };
-let baseURL = '';
+let baseURL = '/callback';
 const client = new line.Client(config);
 const app = express();
 app.post('/callback', line.middleware(config), (req, res) => {
